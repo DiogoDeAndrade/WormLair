@@ -1,6 +1,6 @@
 # WORMLAIR
 
-![TitleImage](Screenshots/screen01.png)
+![TitleImage](Screenshots/Screenshot0000.png)
 
 Developed for the Game Creator's Club at Lusofona University.
 This month, the theme was "Single Screen Game".
