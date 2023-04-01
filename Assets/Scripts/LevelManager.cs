@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BoxCollider2D  innerArea;
     [SerializeField] private BoxCollider2D  outerArea;
     [SerializeField] private Worm           wormPrefab;
+    [SerializeField] private WormModule[]   wormModulePrefabs;
 
     private bool[] doorUsed;
 
@@ -80,7 +81,7 @@ public class LevelManager : MonoBehaviour
         }
         points.Add(exit.transform.position + exit.transform.up * 80.0f);
         points.Add(exit.transform.position);
-        points.Add(exit.wormSpawnPoint.position);
+        points.Add(exit.transform.position - exit.transform.up * 200.0f);
 
         path.SetEditPoints(points);
 
@@ -120,6 +121,32 @@ public class LevelManager : MonoBehaviour
         worm.moveSpeed = gameData.baseMoveSpeed + gameData.moveSpeedPerWave * currentWave;
         worm.rotationSpeed = gameData.baseRotationSpeed + gameData.rotationSpeedPerWave * currentWave;
         worm.SetPath(path, entryId, exitId);
+
+        float   totalValue = gameData.baseValue + gameData.valuePerWave * currentWave;
+
+        int count = 0;
+        while (totalValue > 0)
+        {
+            var candidates = new List<WormModule>(wormModulePrefabs);
+            candidates.RemoveAll((w) => w.moduleValue > totalValue);
+
+            if (candidates.Count == 0) break;
+
+            int r = Random.Range(0, candidates.Count);
+
+            var module = Instantiate(candidates[r], null);
+            module.moveSpeed = worm.moveSpeed;
+            module.rotationSpeed = worm.rotationSpeed;
+
+            worm.AddModule(module);
+
+            count++;
+
+            if (count >= gameData.maxSegments)
+            {
+                break;
+            }
+        }
 
         return worm;
     }

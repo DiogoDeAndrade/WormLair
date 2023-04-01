@@ -18,6 +18,7 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 * [OkapiKit] by Diogo de Andrade, available through the [MIT] license.
 * [NaughtyAttributes] by Denis Rizov, available through the [MIT] license.
 * Arena tileset by [ZiNGOT], available throught the [CC-BY 3.0] license.
+* Top-down buildings by [chabull], licensed under [CC-BY 3.0]
 * All the remaining sprites by Diogo de Andrade, available throught the [CC0] license.
 
 ## Metadata
@@ -29,6 +30,7 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 [NaughtyAttributes]:https://github.com/dbrizov/NaughtyAttributes
 [Midjourney]:https://www.midjourney.com/home/
 [ZiNGOT]:https://opengameart.org/content/alien-breed-esque-top-down-tilesheet
+[chabull]:https://opengameart.org/users/chabull
 [CC0]:https://creativecommons.org/publicdomain/zero/1.0/
 [CC-BY 3.0]:https://creativecommons.org/licenses/by/3.0/
 [MIT]:LICENSE

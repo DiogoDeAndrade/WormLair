@@ -279,6 +279,8 @@ MonoBehaviour:
   innerArea: {fileID: 840238378}
   outerArea: {fileID: 463329245}
   wormPrefab: {fileID: 4274760235216294446, guid: ae1ad6196253d1f438e729b121b1f5b8, type: 3}
+  wormModulePrefabs:
+  - {fileID: 645059721682417640, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
 --- !u!4 &196555354
 Transform:
   m_ObjectHideFlags: 0
