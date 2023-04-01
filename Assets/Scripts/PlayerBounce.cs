@@ -7,17 +7,27 @@ public class PlayerBounce : MonoBehaviour
     [SerializeField] private float degreesPerSecond = 720;
     [SerializeField] private float bounceAmplitude = 4;
 
-    Vector3 prevPosition;
-    float   angle;
+    Vector3     prevPosition;
+    float       angle;
+    Transform   scanTransform;
 
     void Start()
     {
-        prevPosition = transform.position;
+        if (transform.parent)
+        {
+            scanTransform = transform.parent;
+        }
+        else
+        {
+            scanTransform = transform;
+        }
+
+        prevPosition = scanTransform.position;
     }
 
     void Update()
     {
-        var deltaPos = (transform.position - prevPosition).magnitude;
+        var deltaPos = (scanTransform.position - prevPosition).magnitude;
 
         if (deltaPos > 1e-3)
         {
@@ -35,6 +45,6 @@ public class PlayerBounce : MonoBehaviour
 
         transform.localPosition = new Vector3(0.0f, Mathf.Abs(bounceAmplitude * Mathf.Sin(angle * Mathf.Deg2Rad)), 0.0f);
 
-        prevPosition = transform.position;
+        prevPosition = scanTransform.position;
     }
 }

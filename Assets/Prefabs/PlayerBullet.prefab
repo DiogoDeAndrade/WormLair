@@ -10,7 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8582894039001005247}
   - component: {fileID: 5748269544857814279}
+  - component: {fileID: 8280633482951440686}
   - component: {fileID: 1547114869271166930}
+  - component: {fileID: 966324420569674352}
+  - component: {fileID: 74033100297091507}
+  - component: {fileID: 1380569417669247050}
+  - component: {fileID: 9048566052584747781}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -141,6 +146,27 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!50 &8280633482951440686
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413280188466597531}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!114 &1547114869271166930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +187,84 @@ MonoBehaviour:
   description: 
   axis: 1
   speed: 800
+--- !u!114 &966324420569674352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413280188466597531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b66a51b7fe64c4390ac471b7df316b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When a collision with a trigger with tags [Walls] starts:\n         
+    destroys this object\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 1380569417669247050}
+  isTrigger: 1
+  eventType: 0
+  tags:
+  - {fileID: 11400000, guid: 090dc12730179384fa282176e0ac3976, type: 2}
+--- !u!58 &74033100297091507
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413280188466597531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
+--- !u!114 &1380569417669247050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413280188466597531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Destroys this object
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  target: 0
+  targetObject: {fileID: 0}
+  tags: []
+--- !u!114 &9048566052584747781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413280188466597531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4892d2c838ab4d24d8266d8818283e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 11400000, guid: 090dc12730179384fa282176e0ac3976, type: 2}
+  effectPrefb: {fileID: 4283537886588995114, guid: bff27c8d1c0d7f5499f6b86eba6e1ad1, type: 3}

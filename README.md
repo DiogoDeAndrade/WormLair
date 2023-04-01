@@ -1,6 +1,6 @@
 # WORMLAIR
 
-![TitleImage](Screenshots/Screenshot0000.png)
+![TitleImage](Screenshots/Screenshot0001.png)
 
 Developed for the Game Creator's Club at Lusofona University.
 This month, the theme was "Single Screen Game".
@@ -9,8 +9,6 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 
 ## Todo
 
-* Environment
-* Wall collision (shots/player)
 * Auto generate paths between doors
 * Spawn the worms
 * Create worm modules

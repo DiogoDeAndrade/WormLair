@@ -2267,6 +2267,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: space-blks-1.034_103
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b0409de928715449d0e3b085bff0c3
+      internalID: -1033541685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space-blks-1.034_104
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdd336d5e1e7574cbe47c900c49beee
+      internalID: 939109166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space-blks-1.034_105
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b499d3e82b583cc4996e4eaa729c9b4f
+      internalID: 1074346727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space-blks-1.034_106
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3ad8bd6b99e9f4c872fcfeb69bce6e
+      internalID: -1062780755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2299,6 +2383,7 @@ TextureImporter:
       space-blks-1.034_0: 315351427
       space-blks-1.034_20: 532759273
       space-blks-1.034_30: 113655731
+      space-blks-1.034_106: -1062780755
       space-blks-1.034_51: -126924877
       space-blks-1.034_40: -1954686191
       space-blks-1.034_2: -149581138
@@ -2307,6 +2392,7 @@ TextureImporter:
       space-blks-1.034_62: -1299566726
       space-blks-1.034_100: -1474409990
       space-blks-1.034_23: -478714191
+      space-blks-1.034_105: 1074346727
       space-blks-1.034_7: -1496795320
       space-blks-1.034_42: 1728880347
       space-blks-1.034_55: -466995197
@@ -2333,6 +2419,7 @@ TextureImporter:
       space-blks-1.034_44: 71172106
       space-blks-1.034_46: -1462695038
       space-blks-1.034_39: -1180416268
+      space-blks-1.034_104: 939109166
       space-blks-1.034_95: 1072923218
       space-blks-1.034_77: -783828590
       space-blks-1.034_83: -1877139175
@@ -2350,6 +2437,7 @@ TextureImporter:
       space-blks-1.034_73: 1488284639
       space-blks-1.034_47: 1881961632
       space-blks-1.034_67: -1746636773
+      space-blks-1.034_103: -1033541685
       space-blks-1.034_92: 2083816134
       space-blks-1.034_17: 804776717
       space-blks-1.034_38: 1468852135
