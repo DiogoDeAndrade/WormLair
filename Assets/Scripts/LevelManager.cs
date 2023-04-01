@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Door[]         doors;
     [SerializeField] private BoxCollider2D  innerArea;
     [SerializeField] private BoxCollider2D  outerArea;
+    [SerializeField] private Worm           wormPrefab;
 
     private bool[] doorUsed;
 
@@ -37,11 +38,15 @@ public class LevelManager : MonoBehaviour
         var (entryId, exitId, path) = BuildPath(nWaypoints);
         if (path == null) return;
 
+        var worm = BuildWorm(path, entryId, exitId);
+
         doorUsed[entryId] = true;
         doorUsed[exitId] = true;
 
-        doors[entryId].EnableEntry();
+        doors[entryId].EnableEntry(worm);
         doors[exitId].EnableExit();
+
+        Destroy(path.gameObject);
     }
 
     (int, int, Path) BuildPath(int nWaypoints)
@@ -59,7 +64,7 @@ public class LevelManager : MonoBehaviour
         path.SetPathType(Path.PathType.Linear);
 
         List<Vector3> points = new List<Vector3>();
-        points.Add(entry.transform.position);
+        points.Add(entry.wormSpawnPoint.position);
         points.Add(entry.transform.position + entry.transform.up * 80.0f);
         for (int i = 0; i < nWaypoints; i++)
         {
@@ -75,6 +80,7 @@ public class LevelManager : MonoBehaviour
         }
         points.Add(exit.transform.position + exit.transform.up * 80.0f);
         points.Add(exit.transform.position);
+        points.Add(exit.wormSpawnPoint.position);
 
         path.SetEditPoints(points);
 
@@ -101,5 +107,25 @@ public class LevelManager : MonoBehaviour
         }
 
         return (-1, -1);
+    }
+
+    Worm BuildWorm(Path path, int entryId, int exitId)
+    {
+        var startPos = doors[entryId].wormSpawnPoint.position;
+        var startRotation = doors[entryId].wormSpawnPoint.rotation;
+
+        Worm worm = Instantiate(wormPrefab, startPos, startRotation);
+
+        worm.enabled = false;
+        worm.moveSpeed = gameData.baseMoveSpeed + gameData.moveSpeedPerWave * currentWave;
+        worm.rotationSpeed = gameData.baseRotationSpeed + gameData.rotationSpeedPerWave * currentWave;
+        worm.SetPath(path, entryId, exitId);
+
+        return worm;
+    }
+
+    public void FreeDoor(int id)
+    {
+        doorUsed[id] = false;
     }
 }

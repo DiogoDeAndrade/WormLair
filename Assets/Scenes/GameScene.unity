@@ -278,6 +278,7 @@ MonoBehaviour:
   - {fileID: 681106751}
   innerArea: {fileID: 840238378}
   outerArea: {fileID: 463329245}
+  wormPrefab: {fileID: 4274760235216294446, guid: ae1ad6196253d1f438e729b121b1f5b8, type: 3}
 --- !u!4 &196555354
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,10 +4691,6 @@ PrefabInstance:
     - target: {fileID: 6103395920282203343, guid: 156223b208aa1c745998f60829679a71, type: 3}
       propertyPath: m_Name
       value: Door (0)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7007215668005614501, guid: 156223b208aa1c745998f60829679a71, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156223b208aa1c745998f60829679a71, type: 3}
