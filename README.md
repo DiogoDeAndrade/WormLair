@@ -1,16 +1,13 @@
 # WORMLAIR
 
-![TitleImage](Screenshots/Screenshot0003.png)
+![TitleImage](Screenshots/Screenshot0004.png)
 
 Developed for the Game Creator's Club at Lusofona University.
-This month, the theme was "Single Screen Game".
+This month, the theme was "Single Screen Game". I wan't going to enter this month because I'm really late with other
+work, but a student of mine decided to push me, and as a result I built this completely unbalanced monstrosity in his
+honor.
 
 This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing system I'm working on for the students.
-
-## Todo
-
-* Create buff system
-* Create worm modules
 
 ## License
 

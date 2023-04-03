@@ -8,18 +8,24 @@ public class ModuleDestroyer : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         var wormModule = collider.GetComponent<WormModule>();
-        if (wormModule.worm.hasExit)
+        if (wormModule)
         {
-            wormModule.DestroyModule();
+            if (wormModule.worm.hasExit)
+            {
+                wormModule.DestroyModule();
+            }
         }
     }
 
     void OnTriggerStay2D(Collider2D collider)
     {
         var wormModule = collider.GetComponent<WormModule>();
-        if (wormModule.worm.hasExit)
+        if (wormModule)
         {
-            wormModule.DestroyModule();
+            if (wormModule.worm.hasExit)
+            {
+                wormModule.DestroyModule();
+            }
         }
     }
 }

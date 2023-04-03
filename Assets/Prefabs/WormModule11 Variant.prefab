@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2259742330128247609, guid: 61a30dbc3cccf2d4da0b0348393efe72, type: 3}
       propertyPath: m_Name
-      value: WormModule11
+      value: WormModule11 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2696517280832500408, guid: 61a30dbc3cccf2d4da0b0348393efe72, type: 3}
       propertyPath: _explanation
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6303173563055239282, guid: 61a30dbc3cccf2d4da0b0348393efe72, type: 3}
       propertyPath: moduleValue
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6733674558734500186, guid: 61a30dbc3cccf2d4da0b0348393efe72, type: 3}
       propertyPath: m_RootOrder

@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1547114869271166930, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
       propertyPath: speed
-      value: 600
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1547114869271166930, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
       propertyPath: _explanation
-      value: 'Single axis movement towards the Up axis of the object, at 600 units
+      value: 'Single axis movement towards the Up axis of the object, at 300 units
         per second.
 
 '
@@ -34,6 +34,10 @@ PrefabInstance:
     - target: {fileID: 2413280188466597531, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
       propertyPath: m_Name
       value: EnemyBullet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748269544857814279, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_Time
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5748269544857814279, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -109,3 +113,42 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8ff498c5b7335b5488c8b947d92a7895, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+--- !u!114 &1292561194560222451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1380569417669247050, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+  m_PrefabInstance: {fileID: 205156899598300345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568578559938198050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2568578559938198050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2413280188466597531, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+  m_PrefabInstance: {fileID: 205156899598300345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4031856093831135081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568578559938198050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe33e4a0e2979294d8e04d307e34bb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When this object is created:\n At 10 seconds, \n          destroys
+    this object\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 10
+    action: {fileID: 1292561194560222451}

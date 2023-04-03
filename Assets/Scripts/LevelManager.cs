@@ -47,6 +47,11 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            SceneManager.LoadScene(0);
+        }
+
         var player = gameObject.FindObjectWithHypertag(playerTag);
         if (player == null)
         {
@@ -180,8 +185,6 @@ public class LevelManager : MonoBehaviour
         worm.SetPath(path, entryId, exitId);
 
         float   totalValue = (gameData.baseValue + gameData.valuePerWave * (currentWave - 1)) * multiplier;
-        Debug.Log(multiplier);
-        Debug.Log(totalValue);
 
         int count = 0;
         while (totalValue > 0)

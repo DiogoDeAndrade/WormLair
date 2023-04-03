@@ -67,11 +67,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232392814934500410, guid: 2a9cd6f8e92207146859b7d4e29004eb, type: 3}
       propertyPath: moduleValue
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8257652899961208689, guid: 2a9cd6f8e92207146859b7d4e29004eb, type: 3}
       propertyPath: m_Name
-      value: WormModule07
+      value: WormModule07 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a9cd6f8e92207146859b7d4e29004eb, type: 3}

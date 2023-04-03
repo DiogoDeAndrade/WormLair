@@ -73,9 +73,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 819430365810739088, guid: a8f3769ae6b1605428faefbcab4216f7, type: 3}
+      propertyPath: moduleValue
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4862298575774555355, guid: a8f3769ae6b1605428faefbcab4216f7, type: 3}
       propertyPath: m_Name
-      value: WormModule06
+      value: WormModule06 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8f3769ae6b1605428faefbcab4216f7, type: 3}
