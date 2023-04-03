@@ -1,6 +1,6 @@
 # WORMLAIR
 
-![TitleImage](Screenshots/Screenshot0002.png)
+![TitleImage](Screenshots/Screenshot0003.png)
 
 Developed for the Game Creator's Club at Lusofona University.
 This month, the theme was "Single Screen Game".
@@ -9,7 +9,6 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 
 ## Todo
 
-* Spawn the worms
 * Create worm modules
 
 ## License
@@ -19,6 +18,7 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 * [NaughtyAttributes] by Denis Rizov, available through the [MIT] license.
 * Arena tileset by [ZiNGOT], available throught the [CC-BY 3.0] license.
 * Top-down buildings by [chabull], licensed under [CC-BY 3.0]
+* Font by [The Planet], licensed under CD-Ware (free for non-comercial use)
 * All the remaining sprites by Diogo de Andrade, available throught the [CC0] license.
 
 ## Metadata
@@ -33,4 +33,5 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 [chabull]:https://opengameart.org/users/chabull
 [CC0]:https://creativecommons.org/publicdomain/zero/1.0/
 [CC-BY 3.0]:https://creativecommons.org/licenses/by/3.0/
+[The Planet]:http://planet.dk/
 [MIT]:LICENSE

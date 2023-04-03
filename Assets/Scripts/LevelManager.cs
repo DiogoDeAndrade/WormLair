@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using NaughtyAttributes;
 using OkapiKit;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -12,13 +14,23 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BoxCollider2D  innerArea;
     [SerializeField] private BoxCollider2D  outerArea;
     [SerializeField] private Worm           wormPrefab;
+    [SerializeField] private WormModule     wormTailModule;
     [SerializeField] private WormModule[]   wormModulePrefabs;
 
-    private bool[] doorUsed;
+    [SerializeField] private Hypertag       playerTag;
+
+    [SerializeField] private TextMeshProUGUI    waveText;
+    [SerializeField] private TextMeshProUGUI    gameOverText;
+
+    private bool[]      doorUsed;
+    private List<Worm>  wormList;
+    private float       spawnTimer = 2.0f;
 
     void Start()
     {
-        currentWave = 1;
+#if !UNITY_EDITOR
+        currentWave = 0;
+#endif
         innerArea.enabled = false;
         outerArea.enabled = false;
         doorUsed = new bool[doors.Length];
@@ -26,20 +38,65 @@ public class LevelManager : MonoBehaviour
         {
             doorUsed[i] = false;
         }
+
+        wormList = new List<Worm>();
+        spawnTimer = 2.0f;
+
+        UpdateUI();
     }
 
     void Update()
     {
+        var player = gameObject.FindObjectWithHypertag(playerTag);
+        if (player == null)
+        {
+            gameOverText.enabled = true;
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                // Restart
+                SceneManager.LoadScene(0);
+            }
+
+            return;
+        }
+
+        wormList.RemoveAll((w) => w == null);
+        if (wormList.Count == 0)
+        {
+            spawnTimer -= Time.deltaTime;
+            if (spawnTimer <= 0)
+            {
+                currentWave++;
+                UpdateUI();
+
+                int maxWorm = Mathf.FloorToInt(1 + gameData.wormPerWave * currentWave);
+                int     nWorm = Random.Range(1, maxWorm);
+                float   multiplier = Mathf.Min(1.0f, Mathf.Floor(maxWorm / nWorm));
+                for (int i = 0; i < nWorm; i++)
+                {
+                    SpawnWorm(multiplier);
+                }
+
+                spawnTimer = 2.0f;
+            }
+        }
     }
 
     [Button("Test Spawn Worm")]
-    void SpawnWorm()
+    void TestSpawnWorm()
+    {
+        SpawnWorm(1.0f);
+    }
+
+    void SpawnWorm(float multiplier)
     {
         int nWaypoints = Mathf.FloorToInt(1 + gameData.wayPointsPerWave * currentWave);
         var (entryId, exitId, path) = BuildPath(nWaypoints);
         if (path == null) return;
 
-        var worm = BuildWorm(path, entryId, exitId);
+        var worm = BuildWorm(multiplier, path, entryId, exitId);
+        wormList.Add(worm);
 
         doorUsed[entryId] = true;
         doorUsed[exitId] = true;
@@ -110,7 +167,7 @@ public class LevelManager : MonoBehaviour
         return (-1, -1);
     }
 
-    Worm BuildWorm(Path path, int entryId, int exitId)
+    Worm BuildWorm(float multiplier, Path path, int entryId, int exitId)
     {
         var startPos = doors[entryId].wormSpawnPoint.position;
         var startRotation = doors[entryId].wormSpawnPoint.rotation;
@@ -122,7 +179,9 @@ public class LevelManager : MonoBehaviour
         worm.rotationSpeed = gameData.baseRotationSpeed + gameData.rotationSpeedPerWave * currentWave;
         worm.SetPath(path, entryId, exitId);
 
-        float   totalValue = gameData.baseValue + gameData.valuePerWave * currentWave;
+        float   totalValue = (gameData.baseValue + gameData.valuePerWave * (currentWave - 1)) * multiplier;
+        Debug.Log(multiplier);
+        Debug.Log(totalValue);
 
         int count = 0;
         while (totalValue > 0)
@@ -132,11 +191,31 @@ public class LevelManager : MonoBehaviour
 
             if (candidates.Count == 0) break;
 
-            int r = Random.Range(0, candidates.Count);
+            // Sort by value
+            candidates.Sort((m1, m2) => m1.moduleValue.CompareTo(m2.moduleValue));
 
-            var module = Instantiate(candidates[r], null);
+            WormModule  selectedModule = null;
+            float       accum = 0;
+
+            foreach (var c in candidates) accum += c.moduleValue;
+
+            float val = Random.Range(0.0f, accum);
+            foreach (var c in candidates)
+            {
+                val -= c.moduleValue;
+                if (val < 0)
+                {
+                    selectedModule = c;
+                    break;
+                }
+            }
+            if (selectedModule == null) selectedModule = candidates[candidates.Count - 1];
+
+            var module = Instantiate(selectedModule, null);
             module.moveSpeed = worm.moveSpeed;
             module.rotationSpeed = worm.rotationSpeed;
+
+            totalValue -= selectedModule.moduleValue;
 
             worm.AddModule(module);
 
@@ -147,6 +226,14 @@ public class LevelManager : MonoBehaviour
                 break;
             }
         }
+        if (wormTailModule)
+        {
+            var module = Instantiate(wormTailModule, null);
+            module.moveSpeed = worm.moveSpeed;
+            module.rotationSpeed = worm.rotationSpeed;
+
+            worm.AddModule(module);
+        }
 
         return worm;
     }
@@ -154,5 +241,13 @@ public class LevelManager : MonoBehaviour
     public void FreeDoor(int id)
     {
         doorUsed[id] = false;
+    }
+
+    void UpdateUI()
+    {
+        if (waveText)
+        {
+            waveText.text = $"Wave: <color=#FFFFFF>{currentWave}";
+        }
     }
 }

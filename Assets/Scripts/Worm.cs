@@ -6,6 +6,11 @@ using System.Reflection;
 
 public class Worm : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject      explosionPrefab;
+    [SerializeField]
+    private ParticleSystem[] explosionPS;
+
     public List<Vector3>    path;
     public float            rotationSpeed = 90.0f;
     public float            moveSpeed = 100.0f;
@@ -17,6 +22,7 @@ public class Worm : MonoBehaviour
     private int                 entryId;
     private int                 exitId;
     private List<WormModule>    modules;
+    private bool                isDead = false;
 
     public bool hasExit => (pathIndex >= path.Count);
 
@@ -36,6 +42,16 @@ public class Worm : MonoBehaviour
             if (modules.Count == 0)
             {
                 DestroyWorm();
+            }
+            return;
+        }
+
+        if (modules.Count == 0)
+        {
+            if (!isDead)
+            {
+                Explode();
+                isDead = true;
             }
             return;
         }
@@ -127,5 +143,44 @@ public class Worm : MonoBehaviour
             }
         }
         modules.RemoveAll((m) => (m == null));
+    }
+    private void Explode()
+    {
+        StartCoroutine(ExplodeCR());
+    }
+
+    IEnumerator ExplodeCR()
+    {
+        Animator anim = GetComponent<Animator>();
+        var spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        var t = 0.0f;
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime;
+            foreach (var sr in spriteRenderers)
+            {
+                sr.transform.localPosition = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), 0.0f);
+            }
+
+            yield return null;
+        }
+        if (anim)
+        {
+            anim.SetTrigger("Explode");
+        }
+        yield return new WaitForSeconds(0.15f);
+        if (explosionPrefab)
+        {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
+        }
+        if (explosionPS != null)
+        {
+            foreach (var ps in explosionPS)
+            {
+                ps.Play();
+            }
+        }
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
     }
 }

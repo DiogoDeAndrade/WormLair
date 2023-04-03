@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When a collision with a trigger with tags [Walls] starts:\n         
+  _explanation: "When a collision with a trigger with tags [Walls,WormModule] starts:\n         
     destroys this object\n"
   description: 
   enableTrigger: 1
@@ -214,6 +214,7 @@ MonoBehaviour:
   eventType: 0
   tags:
   - {fileID: 11400000, guid: 090dc12730179384fa282176e0ac3976, type: 2}
+  - {fileID: 11400000, guid: e7f1344f8446a7a42bb8ae849d24bd3f, type: 2}
 --- !u!58 &74033100297091507
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -265,6 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4892d2c838ab4d24d8266d8818283e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags:
+  effectTags:
   - {fileID: 11400000, guid: 090dc12730179384fa282176e0ac3976, type: 2}
   effectPrefb: {fileID: 4283537886588995114, guid: bff27c8d1c0d7f5499f6b86eba6e1ad1, type: 3}
+  damageTags:
+  - {fileID: 11400000, guid: e7f1344f8446a7a42bb8ae849d24bd3f, type: 2}
+  damage: 1

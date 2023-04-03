@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -5,8 +6,12 @@ using UnityEngine;
 
 public class WormModule : MonoBehaviour
 {
-    public float moduleValue = 1.0f;
-    public float moduleRadius = 20.0f;
+    public float        moduleValue = 1.0f;
+    public float        moduleRadius = 20.0f;
+    [SerializeField]
+    private GameObject          explosionPrefab;
+    [SerializeField]
+    private ParticleSystem[]    explosionPS;
 
     [Header("Procedural")]
     public Worm         worm;
@@ -16,11 +21,14 @@ public class WormModule : MonoBehaviour
 
     void Start()
     {
+        HealthSystem hs = GetComponent<HealthSystem>();
+        hs.onDeath += Explode;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (worm == null) return;
         if (!worm.enabled) return;
 
         var headTransform = (prevModule) ? (prevModule.transform) : (worm.transform);
@@ -51,6 +59,51 @@ public class WormModule : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void Explode()
+    {
+        if (explosionPrefab)
+        {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
+        }
+        if (explosionPS != null)
+        {
+            foreach (var ps in explosionPS)
+            {
+                ps.Play();
+            }
+
+            var spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+            if (spriteRenderers != null)
+            {
+                foreach (var sr in spriteRenderers)
+                {
+                    sr.enabled = false;
+                }
+            }
+
+            var colliders = GetComponentsInChildren<Collider2D>();
+            if (colliders != null)
+            {
+                {
+                    foreach (var c in colliders)
+                    {
+                        c.enabled = false;
+                    }
+                }
+            }
+        }
+        if (worm)
+        {
+            worm.RemoveModule(this);
+        }
+        StartCoroutine(ExplodeCR());
+    }
+
+    IEnumerator ExplodeCR()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
+    }
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

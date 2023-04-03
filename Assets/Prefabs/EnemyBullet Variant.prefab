@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &205156899598300345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 966324420569674352, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: _explanation
+      value: "When a collision with a trigger with tags [Walls,Player] starts:\n         
+        destroys this object\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 966324420569674352, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: tags.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ff498c5b7335b5488c8b947d92a7895, type: 2}
+    - target: {fileID: 1547114869271166930, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: axis
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547114869271166930, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: speed
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547114869271166930, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: _explanation
+      value: 'Single axis movement towards the Up axis of the object, at 600 units
+        per second.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2413280188466597531, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_Name
+      value: EnemyBullet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748269544857814279, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d19b4d3b15fa3584da459eb2ebab566c, type: 2}
+    - target: {fileID: 5748269544857814279, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.32166985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748269544857814279, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.1960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748269544857814279, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.8862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 225.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -77.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582894039001005247, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048566052584747781, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048566052584747781, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: effectPrefb
+      value: 
+      objectReference: {fileID: 3868579554012118078, guid: 4e512d878f610a541aa7ceadf59b0cd5, type: 3}
+    - target: {fileID: 9048566052584747781, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}
+      propertyPath: damageTags.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ff498c5b7335b5488c8b947d92a7895, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 42ddbab4ced515641b20d08f1a0bc7ad, type: 3}

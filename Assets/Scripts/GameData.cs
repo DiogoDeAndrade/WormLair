@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "WormLair/Game Data")]
 public class GameData : ScriptableObject
 {
+    public float wormPerWave = 0.1f;
     public float wayPointsPerWave = 0.2f;
     public float baseMoveSpeed = 100.0f;
     public float moveSpeedPerWave = 10.0f;
