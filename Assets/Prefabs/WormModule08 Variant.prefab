@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8854389943435131912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8653989372961772175}
+    m_Modifications:
+    - target: {fileID: 3300695625033630317, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_Name
+      value: Gun02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804524062450338642, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605163185425777513, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 867f2dd3bd2ffc3458e35c48b83d3e36, type: 3}
+    m_RemovedComponents:
+    - {fileID: 2656813818966609925, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+--- !u!1 &6282364882736987749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3300695625033630317, guid: cdab347dae2039742a9d58acf3a7db2a, type: 3}
+  m_PrefabInstance: {fileID: 8854389943435131912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &25425312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6282364882736987749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880a5ca005d24084a800be5935ef4bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'This object will align its up axis with the direction towards the
+    closest object tagged with Player, at a maximum 100 degrees per second.
+
+'
+  description: 
+  speed: 100
+  mode: 3
+  inputType: 0
+  rotationAxis: Horizontal
+  rotationButtonPositive: Right
+  rotationButtonNegative: Left
+  rotationKeyPositive: 275
+  rotationKeyNegative: 276
+  rotationAxisX: Horizontal
+  rotationAxisY: Vertical
+  rotationButtonPositiveX: Right
+  rotationButtonNegativeX: Left
+  rotationButtonPositiveY: Up
+  rotationButtonNegativeY: Down
+  rotationKeyPositiveX: 275
+  rotationKeyNegativeX: 276
+  rotationKeyPositiveY: 273
+  rotationKeyNegativeY: 274
+  axisToAlign: 0
+  targetObject: {fileID: 0}
+  targetTag: {fileID: 11400000, guid: 8ff498c5b7335b5488c8b947d92a7895, type: 2}
+  cameraObject: {fileID: 0}
+  cameraTag: {fileID: 0}
+--- !u!1001 &8854389943771878479
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1159274201658321246, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 645059721682417640, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: moduleValue
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672167123935931555, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+      propertyPath: m_Name
+      value: WormModule08 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+--- !u!1 &4195036547409901804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4672167123935931555, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+  m_PrefabInstance: {fileID: 8854389943771878479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1437196652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4195036547409901804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5e16b163b1cd84eb48645e1b7ff1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Find actions underneath this object tagged with any of [GunTrigger]
+    and execute all of them.
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  searchType: 2
+  searchTags: []
+  colliders: []
+  triggerType: 0
+  triggerTags:
+  - {fileID: 11400000, guid: 6749bcedf38795246b28308cdcf3eca7, type: 2}
+--- !u!114 &1437196653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4195036547409901804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46216fa097ecb754babda0f26d640422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Every 2 seconds, trigger the actions::\n          find actions underneath
+    this object tagged with any of [GunTrigger] and execute all of them.\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 1437196652}
+  startTriggered: 0
+  timeInterval: {x: 2, y: 2}
+--- !u!4 &8653989372961772175 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 213984505473795776, guid: 133ae751a81ab1942ab018fd41ec1296, type: 3}
+  m_PrefabInstance: {fileID: 8854389943771878479}
+  m_PrefabAsset: {fileID: 0}

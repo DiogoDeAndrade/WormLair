@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6150695924232563648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1702547413625408363, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: speed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702547413625408363, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: _explanation
+      value: 'Single axis movement towards the Up axis of the object, at 200 units
+        per second.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568578559938198050, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_Name
+      value: EnemyTrackerBullet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556643346802586046, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_Time
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556643346802586046, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fc59899b8589bf45863d06690926b8d, type: 2}
+    - target: {fileID: 5556643346802586046, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.1960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556643346802586046, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.8390369
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 156.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -113.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485993065452800006, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172191964525627324, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+      propertyPath: effectPrefb
+      value: 
+      objectReference: {fileID: 2636967042022142587, guid: 2e4434a7ab9262640a9073f65e04b93a, type: 3}
+    m_RemovedComponents:
+    - {fileID: 1702547413625408363, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+--- !u!114 &4948243040467967795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1292561194560222451, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+  m_PrefabInstance: {fileID: 6150695924232563648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574508227362804194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8574508227362804194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2568578559938198050, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}
+  m_PrefabInstance: {fileID: 6150695924232563648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2104567560706395466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574508227362804194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a821a52a563d1854e98869fa6bd62ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'Follows the closest object tagged with [Player], at 200 units per
+    second.
+
+'
+  description: 
+  speed: 200
+  targetType: 0
+  targetTag: {fileID: 11400000, guid: 8ff498c5b7335b5488c8b947d92a7895, type: 2}
+  targetObject: {fileID: 0}
+  stoppingDistance: 0
+  relativeMovement: 0
+  rotateTowardsDirection: 0
+  alignAxis: 0
+  maxRotationSpeed: 360
+  cameraObject: {fileID: 0}
+  cameraTag: {fileID: 0}
+--- !u!114 &4045050508291595648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574508227362804194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab EnemyOmniSparks Variant at the position of this object
+    (EnemyTrackerBullet Variant)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 6972805070185559492, guid: 15944ae660a1ca4459dbdf419f36e865, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!114 &7372220553233230836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574508227362804194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe33e4a0e2979294d8e04d307e34bb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When this object is created:\n At 5 seconds, \n          spawns
+    prefab EnemyOmniSparks Variant at the position of this object (EnemyTrackerBullet
+    Variant)\n          destroys this object\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 5
+    action: {fileID: 4045050508291595648}
+  - delay: 5
+    action: {fileID: 4948243040467967795}

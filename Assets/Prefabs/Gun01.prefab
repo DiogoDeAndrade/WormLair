@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6804524062450338642}
   - component: {fileID: 7605163185425777513}
+  - component: {fileID: 7509229809204484255}
   - component: {fileID: 2656813818966609925}
   - component: {fileID: 3986451681089765606}
   - component: {fileID: 4654848236366642111}
@@ -119,6 +120,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7509229809204484255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300695625033630317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: 260c0db46db13ca41a837e5eeadfa380, type: 2}
 --- !u!114 &2656813818966609925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,8 +178,9 @@ MonoBehaviour:
   _explanation: Spawns prefab EnemyBullet Variant at the position of Shoot
   description: 
   enableAction: 1
-  hasTags: 0
-  actionTags: []
+  hasTags: 1
+  actionTags:
+  - {fileID: 11400000, guid: 6749bcedf38795246b28308cdcf3eca7, type: 2}
   hasConditions: 0
   actionConditions: []
   prefabObject: {fileID: 2568578559938198050, guid: c4d831ba050bd5c459c9af719cd8f4ac, type: 3}

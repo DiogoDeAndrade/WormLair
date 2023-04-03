@@ -9,15 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e752c8dafd5f4da1853640662547f, type: 3}
-  m_Name: GameData
+  m_Script: {fileID: 11500000, guid: d67469e53046b9b479afab539d5b8697, type: 3}
+  m_Name: Gun
   m_EditorClassIdentifier: 
-  wormPerWave: 0.02
-  wayPointsPerWave: 0.2
-  baseMoveSpeed: 100
-  moveSpeedPerWave: 1
-  baseRotationSpeed: 90
-  rotationSpeedPerWave: 2
-  baseValue: 5
-  valuePerWave: 2
-  maxSegments: 10

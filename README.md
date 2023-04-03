@@ -9,6 +9,7 @@ This uses a mix of custom scripts and the [OkapiKit], a no-code kit bashing syst
 
 ## Todo
 
+* Create buff system
 * Create worm modules
 
 ## License

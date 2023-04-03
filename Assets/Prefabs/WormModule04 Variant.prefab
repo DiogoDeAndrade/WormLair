@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1572897228241596036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789124870828632873, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224429908210768385, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: moduleValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249124908955009354, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+      propertyPath: m_Name
+      value: WormModule04
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5148277533956603050, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+    - {fileID: 6131956753409380430, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+--- !u!114 &4695574532488282829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6124338705287916617, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+  m_PrefabInstance: {fileID: 1572897228241596036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5999152210440138281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5086051156912881837, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+  m_PrefabInstance: {fileID: 1572897228241596036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8164495062306811854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7249124908955009354, guid: 8ab7b92f3e52da949ba52c35877c71fe, type: 3}
+  m_PrefabInstance: {fileID: 1572897228241596036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &23658750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164495062306811854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46216fa097ecb754babda0f26d640422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Every [1,1.5] seconds, trigger the actions::\n          spawns prefab
+    EnemyBullet Variant at the position of Shoot\n          spawns prefab EnemyBullet
+    Variant at the position of Shoot\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 4695574532488282829}
+  - delay: 0
+    action: {fileID: 5999152210440138281}
+  startTriggered: 0
+  timeInterval: {x: 1, y: 1.5}

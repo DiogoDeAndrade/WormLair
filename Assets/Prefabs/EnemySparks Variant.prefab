@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4283537886588995114, guid: bff27c8d1c0d7f5499f6b86eba6e1ad1, type: 3}
       propertyPath: m_Name
-      value: EnemySparks
+      value: EnemySparks Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210952671873089516, guid: bff27c8d1c0d7f5499f6b86eba6e1ad1, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7210952671873089516, guid: bff27c8d1c0d7f5499f6b86eba6e1ad1, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
